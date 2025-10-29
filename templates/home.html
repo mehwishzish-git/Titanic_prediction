@@ -1,0 +1,49 @@
+&lt;!DOCTYPE html&gt;
+&lt;html &gt;
+
+&lt;head&gt;
+ &lt;meta charset=&quot;UTF-8&quot;&gt;
+ &lt;title&gt;ML API&lt;/title&gt;
+ &lt;link href=&#39;https://fonts.googleapis.com/css?family=Pacifico&#39; rel=&#39;stylesheet&#39;
+type=&#39;text/css&#39;&gt;
+&lt;link href=&#39;https://fonts.googleapis.com/css?family=Arimo&#39; rel=&#39;stylesheet&#39;
+type=&#39;text/css&#39;&gt;
+&lt;link href=&#39;https://fonts.googleapis.com/css?family=Hind:300&#39; rel=&#39;stylesheet&#39;
+type=&#39;text/css&#39;&gt;
+&lt;link href=&#39;https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&#39;
+rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&gt;
+
+
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div class=&quot;login&quot;&gt;
+&lt;h1&gt;Titanic Survival&lt;/h1&gt;
+
+  &lt;!-- Main Input For Receiving Query to our ML --&gt;   &lt;form action=&quot;{{ url_for(&#39;predict&#39;)}}&quot;method=&quot;post&quot;&gt;
+   &lt;input type=&quot;text&quot; name=&quot;Pclass&quot; placeholder=&quot;Pclass&quot; required=&quot;required&quot; /&gt;&lt;br&gt;
+  &lt;input type=&quot;text&quot; name=&quot;Age&quot; placeholder=&quot;Age&quot; required=&quot;required&quot; /&gt;&lt;br&gt;
+&lt;input type=&quot;text&quot; name=&quot;SibSp&quot; placeholder=&quot;SibSp&quot; required=&quot;required&quot; /&gt;&lt;br&gt;
+&lt;input type=&quot;text&quot; name=&quot;Parch&quot; placeholder=&quot;Parch&quot; required=&quot;required&quot; /&gt;&lt;br &lt;input type=&quot;text&quot; name=&quot;Fare&quot; placeholder=&quot;Fare&quot; required=&quot;required&quot; /&gt;&lt;b &lt;input type=&quot;text&quot; name=&quot;male&quot; placeholder=&quot;male&quot; required=&quot;required&quot; /&gt;&lt;b &lt;input type=&quot;text&quot; name=&quot;Q&quot; placeholder=&quot;Q&quot; required=&quot;required&quot; /&gt;&lt;br&gt;
+ &lt;input type=&quot;text&quot; name=&quot;S&quot; placeholder=&quot;S&quot; required=&quot;required&quot; /&gt;&lt;br&gt;
+ &lt;input type=&quot;text&quot; name=&quot;Miss&quot; placeholder=&quot;Miss&quot; required=&quot;required&quot; /&gt;&lt;br&gt;
+ &lt;input type=&quot;text&quot; name=&quot;Mr&quot; placeholder=&quot;Mr&quot; required=&quot;required&quot; /&gt;&lt;br&gt;
+ &lt;input type=&quot;text&quot; name=&quot;Mrs&quot; placeholder=&quot;Mrs&quot; required=&quot;required&quot; /&gt;&lt;br&gt;
+ &lt;input type=&quot;text&quot; name=&quot;Rare&quot; placeholder=&quot;Rare&quot; required=&quot;required&quot; /&gt;&lt;br&gt;
+ &lt;!-- &lt;input type=&quot;text&quot; name=&quot;LSTAT&quot; placeholder=&quot;LSTAT&quot; required=&quot;required&quot;
+/&gt;&lt;br&gt; --&gt;
+
+
+
+ &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-block btn-
+large&quot;&gt;Predict&lt;/button&gt;
+ &lt;/form&gt;
+
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;/div&gt;
+{{prediction_text}}
+
+&lt;/body&gt;
+&lt;/html&gt;
